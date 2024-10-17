@@ -2,6 +2,7 @@
 using AtuliaRestaurantsCo.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace AtuliaRestaurantsCo.Controllers
 {
@@ -30,6 +31,14 @@ namespace AtuliaRestaurantsCo.Controllers
         {
             return View();
         }
-
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create((Bind('IngredientId","IngredientName")] 
+            if(!ModelState.IsValid)
+        {
+            await ingredients.AddAsync(ingredients);
+            return RedirectToAction("Index")
+        }
+        return View(Ingredient)
     }
 }
