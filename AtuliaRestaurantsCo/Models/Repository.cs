@@ -14,14 +14,17 @@ namespace AtuliaRestaurantsCo.Models
             _context = context;
             _dbSet = context.Set<T>();    
         }
-        public Task AddAsync(T entity)
+        public async Task AddAsync(T entity)
         {
-            throw new NotImplementedException();
+            await _dbSet.AddAsync(entity);
+            await _context.SaveChangesAsync();
         }
 
-        public Task DeleteAsync(int id)
+        public async Task DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+            T wntity = await _dbSet.FindAsync(id);
+            _dbSet.Remove(wntity);
+            await _context.SaveChangesAsync();
         }
 
         public async Task<IEnumerable<T>> GetAllAsync()
@@ -53,12 +56,12 @@ namespace AtuliaRestaurantsCo.Models
             var key = _context.Model.FindEntityType(typeof(T)).FindPrimaryKey().Properties.FirstOrDefault();
             string primaryKeyName = key?.Name;
             return await query.FirstOrDefaultAsync(e => EF.Property<int>(e, primaryKeyName) == id);
-        }
+        } 
 
 
-        public Task UpdateAsync(T entity)
+        public async Task UpdateAsync(T entity)
         {
-            throw new NotImplementedException();
+            _context.SaveChangesAsync();
         }
     }
 }

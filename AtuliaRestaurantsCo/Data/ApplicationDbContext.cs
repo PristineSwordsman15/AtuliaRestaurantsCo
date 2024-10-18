@@ -40,29 +40,29 @@ namespace AtuliaRestaurantsCo.Data
 
             //Seed Data
             builder.Entity<Category>().HasData(
-               new Category { CategoryId = 1, CategoryName = "Appetizer" },
-               new Category { CategoryId = 2, CategoryName = "Main" },
-               new Category { CategoryId = 3, CategoryName = "Dessert" },
-               new Category { CategoryId = 4, CategoryName = "Beverage" }
+               new Category { CategoryId = 1, Name = "Appetizer" },
+               new Category { CategoryId = 2, Name = "Main" },
+               new Category { CategoryId = 3, Name = "Dessert" },
+               new Category { CategoryId = 4, Name = "Beverage" }
            );
 
             builder.Entity<Ingredient>().HasData(
              //add indian restaurant ingredients here
-             new Ingredient { IngredientId = 1, IngredientName = "Potato" },
-             new Ingredient { IngredientId = 2, IngredientName = "Chicken" },
-             new Ingredient { IngredientId = 3, IngredientName = "Fish" },
-             new Ingredient { IngredientId = 4, IngredientName = "Naan" },
-             new Ingredient { IngredientId = 5, IngredientName = "Spinach" },
-             new Ingredient { IngredientId = 6, IngredientName = "Tomato" },
-             new Ingredient { IngredientId = 7, IngredientName = "White Rice" },
-             new Ingredient { IngredientId = 8, IngredientName = "Peas" },
-             new Ingredient { IngredientId = 9, IngredientName = "Coriander" },
-             new Ingredient { IngredientId = 10, IngredientName = "Lentils" },
-             new Ingredient { IngredientId = 11, IngredientName = "Gulab Jamun" },
-             new Ingredient { IngredientId = 12, IngredientName = "Ice Cream" },
-             new Ingredient { IngredientId = 13, IngredientName = "Water" },
-             new Ingredient { IngredientId = 14, IngredientName = "Mango Lassi" },
-             new Ingredient { IngredientId = 15, IngredientName = "Coke" }
+             new Ingredient { IngredientId = 1, Name = "Potato" },
+             new Ingredient { IngredientId = 2, Name = "Chicken" },
+             new Ingredient { IngredientId = 3, Name = "Fish" },
+             new Ingredient { IngredientId = 4, Name = "Naan" },
+             new Ingredient { IngredientId = 5, Name = "Spinach" },
+             new Ingredient { IngredientId = 6, Name = "Tomato" },
+             new Ingredient { IngredientId = 7, Name = "White Rice" },
+             new Ingredient { IngredientId = 8, Name = "Peas" },
+             new Ingredient { IngredientId = 9, Name = "Coriander" },
+             new Ingredient { IngredientId = 10, Name = "Lentils" },
+             new Ingredient { IngredientId = 11, Name = "Gulab Jamun" },
+             new Ingredient { IngredientId = 12, Name = "Ice Cream" },
+             new Ingredient { IngredientId = 13, Name = "Water" },
+             new Ingredient { IngredientId = 14, Name = "Mango Lassi" },
+             new Ingredient { IngredientId = 15, Name = "Coke" }
 
 
          );
@@ -71,7 +71,7 @@ namespace AtuliaRestaurantsCo.Data
                 new Product
                 {
                     ProductId = 1,
-                    ProductName = "Naan",
+                    Name = "Naan",
                     Description = "A fluffy bread popular in North India",
                     Price = 7.99m,
                     Stock = 25,
@@ -80,7 +80,7 @@ namespace AtuliaRestaurantsCo.Data
                 new Product
                 {
                     ProductId = 2,
-                    ProductName = "Fried Rice",
+                    Name = "Fried Rice",
                     Description = "Mild yummy rice with peas",
                     Price = 10.99m,
                     Stock = 40,
@@ -89,7 +89,7 @@ namespace AtuliaRestaurantsCo.Data
                 new Product
                 {
                     ProductId = 3,
-                    ProductName = "Aloo Fry",
+                    Name = "Aloo Fry",
                     Description = "Fried Potato Curry served with Naan and Rice",
                     Price = 8.50m,
                     Stock = 10,
@@ -98,7 +98,7 @@ namespace AtuliaRestaurantsCo.Data
                 new Product
                 {
                     ProductId = 4,
-                    ProductName = "Coke",
+                    Name = "Coke",
                     Description = "Chilled Fizzy Beverage",
                     Price = 2.99m,
                     Stock = 50,
@@ -107,7 +107,7 @@ namespace AtuliaRestaurantsCo.Data
                 new Product
                 {
                     ProductId = 5,
-                    ProductName = "Water",
+                    Name = "Water",
                     Description = "Beverage",
                     Price = 3.99m,
                     Stock = 50,
@@ -116,7 +116,7 @@ namespace AtuliaRestaurantsCo.Data
                 new Product
                 {
                     ProductId = 6,
-                    ProductName = "Mango Lassi",
+                    Name = "Mango Lassi",
                     Description = "Cool Mango drink",
                     Price = 5.00m,
                     Stock = 20,
@@ -125,7 +125,7 @@ namespace AtuliaRestaurantsCo.Data
                 new Product
                 {
                     ProductId = 7,
-                    ProductName = "Gulab Jamun",
+                    Name = "Gulab Jamun",
                     Description = "Indian sweet made with milk powder",
                     Price = 4.99m,
                     Stock = 30,
@@ -134,7 +134,7 @@ namespace AtuliaRestaurantsCo.Data
                 new Product
                 {
                     ProductId = 8,
-                    ProductName = "Ice Cream",
+                    Name = "Ice Cream",
                     Description = "Frozen dessert",
                     Price = 2.99m,
                     Stock = 60,
@@ -143,7 +143,7 @@ namespace AtuliaRestaurantsCo.Data
                 new Product
                 {
                     ProductId = 9,
-                    ProductName = "Butter Chicken",
+                    Name = "Butter Chicken",
                     Description = "Chiken flavoured lightly in spices and served with rice",
                     Price = 20.99m,
                     Stock = 30,
@@ -152,7 +152,7 @@ namespace AtuliaRestaurantsCo.Data
                 new Product
                 {
                     ProductId = 10,
-                    ProductName = "Fish Madrasi",
+                    Name = "Fish Madrasi",
                     Description = "Fish curry served with rice",
                     Price = 19.99m,
                     Stock = 20,
@@ -161,7 +161,7 @@ namespace AtuliaRestaurantsCo.Data
                 new Product
                 {
                     ProductId = 11,
-                    ProductName = "Palak Fritters",
+                    Name = "Palak Fritters",
                     Description = "Spinach deepfried coated in batter",
                     Price = 6.99m,
                     Stock = 30,
@@ -170,7 +170,7 @@ namespace AtuliaRestaurantsCo.Data
                 new Product
                 {
                     ProductId = 12,
-                    ProductName = "Chicken Lollipops",
+                    Name = "Chicken Lollipops",
                     Description = "Chicken lightly coated in spices and fried",
                     Price = 8.9m,
                     Stock = 30,
@@ -179,7 +179,7 @@ namespace AtuliaRestaurantsCo.Data
                 new Product
                 {
                     ProductId = 13,
-                    ProductName = "Daal Fry",
+                    Name = "Daal Fry",
                     Description = "Lentil cooked with tomato and garnished with coriander.",
                     Price = 7.99m,
                     Stock = 20,
